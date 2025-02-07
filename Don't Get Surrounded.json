@@ -166,6 +166,30 @@
         "name": "tree.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "crowFlapUp.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "crowFlapUp.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "crowFlapDown.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "crowFlapDown.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "crowFlapDown2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "crowFlapDown2.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -329,6 +353,23 @@
           "x": 360,
           "y": 234,
           "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 268,
+          "keepRatio": true,
+          "layer": "",
+          "name": "crow",
+          "persistentUuid": "08c90db6-1f4a-45b2-9976-ebf4880207ff",
+          "width": 210,
+          "x": 996,
+          "y": 277,
+          "zOrder": 9,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -593,6 +634,102 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "crow",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "flapUp",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.5,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "crowFlapUp.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 70,
+                            "y": 145
+                          },
+                          {
+                            "x": 430,
+                            "y": 145
+                          },
+                          {
+                            "x": 430,
+                            "y": 355
+                          },
+                          {
+                            "x": 70,
+                            "y": 355
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "crowFlapDown2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 70,
+                            "y": 145
+                          },
+                          {
+                            "x": 430,
+                            "y": 145
+                          },
+                          {
+                            "x": 430,
+                            "y": 355
+                          },
+                          {
+                            "x": 70,
+                            "y": 355
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -609,6 +746,9 @@
           },
           {
             "objectName": "cloud"
+          },
+          {
+            "objectName": "crow"
           }
         ]
       },
