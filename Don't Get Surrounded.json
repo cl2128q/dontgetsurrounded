@@ -190,6 +190,14 @@
         "name": "crowFlapDown2.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "carrot.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "carrot.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -370,6 +378,23 @@
           "x": 996,
           "y": 277,
           "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 94,
+          "keepRatio": true,
+          "layer": "",
+          "name": "carrot",
+          "persistentUuid": "e8c46c3e-6e86-4641-b91d-993ec43299e5",
+          "width": 101,
+          "x": 1091,
+          "y": 68,
+          "zOrder": 10,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -730,6 +755,66 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "carrot",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "carrot.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 40,
+                            "y": 60
+                          },
+                          {
+                            "x": 470,
+                            "y": 60
+                          },
+                          {
+                            "x": 470,
+                            "y": 440
+                          },
+                          {
+                            "x": 40,
+                            "y": 440
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -749,6 +834,9 @@
           },
           {
             "objectName": "crow"
+          },
+          {
+            "objectName": "carrot"
           }
         ]
       },
