@@ -198,6 +198,38 @@
         "name": "carrot.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "assets/NewTiledSprite.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "NewTiledSprite",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewTiledSprite2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "NewTiledSprite2",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewTiledSprite3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "NewTiledSprite3",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewTiledSprite4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "NewTiledSprite4",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -229,77 +261,12 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.3192894589690166,
+        "zoomFactor": 0.1878173288053041,
         "windowMask": false
       },
       "objectsGroups": [],
       "variables": [],
       "instances": [
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 5986,
-          "keepRatio": true,
-          "layer": "",
-          "name": "sky_bg",
-          "persistentUuid": "1b3fd52e-3aae-434e-afd2-da9d42047a6c",
-          "width": 7758,
-          "x": -3040,
-          "y": -2367,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "cloud",
-          "persistentUuid": "b48693af-3242-4816-b60a-a554b6ed219c",
-          "width": 0,
-          "x": 1380,
-          "y": 71,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "cloud",
-          "persistentUuid": "48a7cd0c-a7b2-4cc6-a8be-67e950e39466",
-          "width": 0,
-          "x": 157,
-          "y": 386,
-          "zOrder": 3,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "cloud",
-          "persistentUuid": "1b93bbf2-6d3d-46f2-a24b-8e25e46a6533",
-          "width": 0,
-          "x": 1370,
-          "y": 784,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
         {
           "angle": 0,
           "customSize": false,
@@ -349,7 +316,7 @@
           "initialVariables": []
         },
         {
-          "angle": 2,
+          "angle": 0,
           "customSize": true,
           "depth": 1,
           "height": 327,
@@ -395,6 +362,23 @@
           "x": 1091,
           "y": 68,
           "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 1573,
+          "keepRatio": true,
+          "layer": "",
+          "name": "sky_tile",
+          "persistentUuid": "cbc11b6d-e1c2-47c4-a544-5b418b02a7d8",
+          "width": 2362,
+          "x": -242,
+          "y": -289,
+          "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -594,6 +578,7 @@
           "effects": [],
           "behaviors": [
             {
+              "ignoreDefaultControls": false,
               "name": "TopDownMovement",
               "type": "TopDownMovementBehavior::TopDownMovementBehavior",
               "acceleration": 400,
@@ -602,7 +587,6 @@
               "angularMaxSpeed": 180,
               "customIsometryAngle": 30,
               "deceleration": 800,
-              "ignoreDefaultControls": false,
               "maxSpeed": 400,
               "movementAngleOffset": 0,
               "rotateObject": false,
@@ -815,6 +799,17 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "height": 32,
+          "name": "sky_tile",
+          "texture": "NewTiledSprite4",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
         }
       ],
       "objectsFolderStructure": {
@@ -837,10 +832,30 @@
           },
           {
             "objectName": "carrot"
+          },
+          {
+            "objectName": "sky_tile"
           }
         ]
       },
-      "events": [],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "TiledSpriteObject::XOffset"
+              },
+              "parameters": [
+                "sky_tile",
+                "+",
+                "2"
+              ]
+            }
+          ]
+        }
+      ],
       "layers": [
         {
           "ambientLightColorB": 200,
