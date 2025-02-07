@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 221,
+    "build": 224,
     "major": 5,
     "minor": 5,
     "revision": 0
@@ -18,7 +18,6 @@
     "scaleMode": "linear",
     "sizeOnStartupMode": "adaptWidth",
     "templateSlug": "",
-    "useExternalSourceFiles": false,
     "version": "1.0.0",
     "name": "Don't Get Surrounded",
     "description": "",
@@ -127,6 +126,38 @@
         "name": "player2",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "New Piskel (33).png",
+        "kind": "image",
+        "metadata": "",
+        "name": "New Piskel (33).png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "New Piskel (34).png",
+        "kind": "image",
+        "metadata": "",
+        "name": "New Piskel (34).png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "New Piskel (35).png",
+        "kind": "image",
+        "metadata": "",
+        "name": "New Piskel (35).png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "New Piskel (35)2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "New Piskel (35)2.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -158,7 +189,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.28905162031349163,
+        "zoomFactor": 0.6197916666666667,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -489,6 +520,8 @@
           "effects": [],
           "behaviors": [
             {
+              "name": "TopDownMovement",
+              "type": "TopDownMovementBehavior::TopDownMovementBehavior",
               "acceleration": 400,
               "allowDiagonals": true,
               "angleOffset": 0,
@@ -498,25 +531,22 @@
               "ignoreDefaultControls": false,
               "maxSpeed": 400,
               "movementAngleOffset": 0,
-              "name": "TopDownMovement",
               "rotateObject": false,
-              "type": "TopDownMovementBehavior::TopDownMovementBehavior",
               "viewpoint": "TopDown"
             }
           ],
           "animations": [
             {
-              "name": "player",
+              "name": "",
               "useMultipleDirections": false,
               "directions": [
                 {
                   "looping": false,
-                  "metadata": "{\"pskl\":{}}",
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "player2",
+                      "image": "New Piskel (35)2.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -532,20 +562,20 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 120,
-                            "y": 64
+                            "x": 142,
+                            "y": 82
                           },
                           {
-                            "x": 376,
-                            "y": 64
+                            "x": 240,
+                            "y": 82
                           },
                           {
-                            "x": 376,
-                            "y": 488
+                            "x": 240,
+                            "y": 302
                           },
                           {
-                            "x": 120,
-                            "y": 488
+                            "x": 142,
+                            "y": 302
                           }
                         ]
                       ]
@@ -655,6 +685,5 @@
   ],
   "externalEvents": [],
   "eventsFunctionsExtensions": [],
-  "externalLayouts": [],
-  "externalSourceFiles": []
+  "externalLayouts": []
 }
