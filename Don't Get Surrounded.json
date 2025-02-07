@@ -230,6 +230,14 @@
         "name": "NewTiledSprite4",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "carrot2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "carrot2.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -239,7 +247,13 @@
     "folderName": "__ROOT"
   },
   "objectsGroups": [],
-  "variables": [],
+  "variables": [
+    {
+      "name": "Carrots",
+      "type": "number",
+      "value": 0
+    }
+  ],
   "layouts": [
     {
       "b": 209,
@@ -261,11 +275,17 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.1878173288053041,
+        "zoomFactor": 0.4303403802207661,
         "windowMask": false
       },
       "objectsGroups": [],
-      "variables": [],
+      "variables": [
+        {
+          "name": "CarrotAmmo",
+          "type": "number",
+          "value": 0
+        }
+      ],
       "instances": [
         {
           "angle": 0,
@@ -353,23 +373,6 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 94,
-          "keepRatio": true,
-          "layer": "",
-          "name": "carrot",
-          "persistentUuid": "e8c46c3e-6e86-4641-b91d-993ec43299e5",
-          "width": 101,
-          "x": 1091,
-          "y": 68,
-          "zOrder": 10,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
           "height": 1573,
           "keepRatio": true,
           "layer": "",
@@ -379,6 +382,73 @@
           "x": -242,
           "y": -289,
           "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 78,
+          "keepRatio": true,
+          "layer": "",
+          "name": "carrotPickup",
+          "persistentUuid": "3febe6d2-b0ce-4961-9cd9-4c226dfcb860",
+          "width": 85,
+          "x": 1175,
+          "y": 103,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 74,
+          "keepRatio": true,
+          "layer": "",
+          "name": "carrotPickup",
+          "persistentUuid": "b981d87c-d5e9-403f-bc8d-e043379028bc",
+          "width": 93,
+          "x": 1539,
+          "y": 149,
+          "zOrder": 11,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "carrotText",
+          "persistentUuid": "faca43cf-fbf1-4a1a-8cc6-c55e1d480214",
+          "width": 0,
+          "x": 1380,
+          "y": 36,
+          "zOrder": 12,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 192,
+          "keepRatio": true,
+          "layer": "",
+          "name": "carrotPickup",
+          "persistentUuid": "4379e3ea-5aec-448f-8e3c-13c812f6f0da",
+          "width": 167,
+          "x": 454,
+          "y": 48,
+          "zOrder": 13,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -578,9 +648,9 @@
           "effects": [],
           "behaviors": [
             {
-              "ignoreDefaultControls": true,
               "name": "TopDownMovement",
               "type": "TopDownMovementBehavior::TopDownMovementBehavior",
+              "ignoreDefaultControls": true,
               "acceleration": 400,
               "allowDiagonals": true,
               "angleOffset": 0,
@@ -810,6 +880,114 @@
           "variables": [],
           "effects": [],
           "behaviors": []
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "carrotPickup",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "CarrotAmmo",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "carrot2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 40,
+                            "y": 60
+                          },
+                          {
+                            "x": 470,
+                            "y": 60
+                          },
+                          {
+                            "x": 470,
+                            "y": 440
+                          },
+                          {
+                            "x": 40,
+                            "y": 440
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "carrotText",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Carrot Pickup",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 24,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Carrot Pickup",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 24,
+            "color": "0;0;0"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -832,6 +1010,12 @@
           },
           {
             "objectName": "carrot"
+          },
+          {
+            "objectName": "carrotPickup"
+          },
+          {
+            "objectName": "carrotText"
           },
           {
             "objectName": "sky_tile"
@@ -903,6 +1087,56 @@
                 "player",
                 "TopDownMovement",
                 "\"Down\""
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "carrotPickup",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [],
+          "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "player",
+                "carrotPickup",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "carrotPickup",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "carrotPickup",
+                "CarrotAmmo",
+                "+",
+                "1"
               ]
             }
           ]
@@ -978,6 +1212,10 @@
         {
           "name": "Scale",
           "type": "ScalableCapability::ScalableBehavior"
+        },
+        {
+          "name": "Text",
+          "type": "TextContainerCapability::TextContainerBehavior"
         },
         {
           "name": "TopDownMovement",
