@@ -578,7 +578,7 @@
           "effects": [],
           "behaviors": [
             {
-              "ignoreDefaultControls": false,
+              "ignoreDefaultControls": true,
               "name": "TopDownMovement",
               "type": "TopDownMovementBehavior::TopDownMovementBehavior",
               "acceleration": 400,
@@ -851,6 +851,58 @@
                 "sky_tile",
                 "+",
                 "2"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Up\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "TopDownMovementBehavior::SimulateControl"
+              },
+              "parameters": [
+                "player",
+                "TopDownMovement",
+                "\"Up\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Down\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "TopDownMovementBehavior::SimulateControl"
+              },
+              "parameters": [
+                "player",
+                "TopDownMovement",
+                "\"Down\""
               ]
             }
           ]
