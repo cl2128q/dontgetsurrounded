@@ -158,6 +158,14 @@
         "name": "New Piskel (35)2.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "tree.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "tree.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -189,7 +197,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.6197916666666667,
+        "zoomFactor": 0.3192894589690166,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -266,7 +274,7 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "NewSprite",
+          "name": "tree",
           "persistentUuid": "c3870fec-c624-40ee-8cac-d2a85cd2c1a4",
           "width": 0,
           "x": -417,
@@ -282,7 +290,7 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "NewSprite",
+          "name": "tree",
           "persistentUuid": "161d6dfe-18b1-4364-b485-1cd5952e8dc3",
           "width": 0,
           "x": 1453,
@@ -298,7 +306,7 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "NewSprite",
+          "name": "tree",
           "persistentUuid": "b4766810-d036-42ba-9647-0d9de0b78c51",
           "width": 0,
           "x": 820,
@@ -452,7 +460,7 @@
         {
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
-          "name": "NewSprite",
+          "name": "tree",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -460,7 +468,7 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "NewSprite",
+              "name": "tree",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -470,7 +478,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "NewSprite6",
+                      "image": "tree.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -486,20 +494,20 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 40,
-                            "y": 32
+                            "x": 50,
+                            "y": 45
                           },
                           {
-                            "x": 448,
-                            "y": 32
+                            "x": 435,
+                            "y": 45
                           },
                           {
-                            "x": 448,
-                            "y": 512
+                            "x": 435,
+                            "y": 500
                           },
                           {
-                            "x": 40,
-                            "y": 512
+                            "x": 50,
+                            "y": 500
                           }
                         ]
                       ]
@@ -594,7 +602,7 @@
             "objectName": "sky_bg"
           },
           {
-            "objectName": "NewSprite"
+            "objectName": "tree"
           },
           {
             "objectName": "player"
