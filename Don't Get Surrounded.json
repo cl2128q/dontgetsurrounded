@@ -389,7 +389,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.4163025217733358,
+        "zoomFactor": 0.1700303648902906,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -1788,6 +1788,15 @@
                 "",
                 "\"EnemySpawn\""
               ]
+            },
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"CarrotSpawn\""
+              ]
             }
           ]
         },
@@ -1835,7 +1844,7 @@
               "parameters": [
                 "CarrotAmmo",
                 "+",
-                "5"
+                "2"
               ]
             }
           ]
@@ -1973,6 +1982,45 @@
               "parameters": [
                 "",
                 "\"EnemySpawn\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CompareTimer"
+              },
+              "parameters": [
+                "",
+                "\"CarrotSpawn\"",
+                ">=",
+                "6"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "carrotPickup",
+                "RandomInRange(-400,2300)",
+                "RandomInRange(-140,1000)",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"CarrotSpawn\""
               ]
             }
           ]
@@ -2292,18 +2340,36 @@
           "conditions": [
             {
               "type": {
-                "value": "MouseButtonFromTextReleased"
+                "value": "BuiltinCommonInstructions::And"
               },
-              "parameters": [
-                "",
-                "\"Left\""
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "MouseButtonFromTextReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Left\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "CarrotAmmo",
+                    ">",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
               ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
             }
           ],
           "actions": [
@@ -2325,6 +2391,16 @@
             },
             {
               "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "CarrotAmmo",
+                "-",
+                "1"
+              ]
+            },
+            {
+              "type": {
                 "value": "Wait"
               },
               "parameters": [
@@ -2338,6 +2414,17 @@
               "parameters": [
                 "carrotAmmo",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "carrotText",
+                "Text",
+                "=",
+                "CarrotAmmo"
               ]
             }
           ]
