@@ -342,6 +342,30 @@
         "name": "New Piskel (35)3.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "carrot (1).png",
+        "kind": "image",
+        "metadata": "",
+        "name": "carrot (1).png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/carrot (1).png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "carrot (1)",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/carrot (1)2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "carrot (1)2",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -373,7 +397,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.6197916666666689,
+        "zoomFactor": 0.3895856273827302,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -450,7 +474,7 @@
           "width": 327,
           "x": 360,
           "y": 234,
-          "zOrder": 8,
+          "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -880,18 +904,48 @@
           "effects": [],
           "behaviors": [
             {
+              "name": "FireBullet",
+              "type": "FireBullet::FireBullet",
+              "FireCooldown": 0.1,
+              "HasJustFired": false,
+              "RotateBullet": true,
+              "FiringArc": 45,
+              "BulletQuantity": 1,
+              "AngleVariance": 0,
+              "BulletSpeedVariance": 0,
+              "AmmoQuantity": 0,
+              "ShotsPerReload": 0,
+              "ReloadDuration": 1,
+              "MaxAmmo": 0,
+              "ShotsBeforeNextReload": 0,
+              "TotalShotsFired": 0,
+              "TotalBulletsCreated": 0,
+              "StartingAmmo": 0,
+              "TotalReloadsCompleted": 0,
+              "UnlimitedAmmo": true,
+              "ReloadInProgress": false,
+              "HeatIncreasePerShot": 0,
+              "HeatLevel": 0,
+              "AutomaticReloading": true,
+              "OverheatDuration": 0,
+              "LinearCoolingRate": 0.1,
+              "ExponentialCoolingRate": 0.3,
+              "BulletLayer": "",
+              "RandomizedAngle": 0
+            },
+            {
+              "allowDiagonals": false,
+              "angularMaxSpeed": 180,
               "name": "TopDownMovement",
+              "rotateObject": false,
               "type": "TopDownMovementBehavior::TopDownMovementBehavior",
               "ignoreDefaultControls": false,
               "acceleration": 400,
-              "allowDiagonals": true,
               "angleOffset": 0,
-              "angularMaxSpeed": 180,
               "customIsometryAngle": 30,
               "deceleration": 800,
               "maxSpeed": 400,
               "movementAngleOffset": 0,
-              "rotateObject": false,
               "viewpoint": "TopDown"
             }
           ],
@@ -907,7 +961,13 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "New Piskel (35)2.png",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "bullet",
+                          "x": 126,
+                          "y": 12
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
@@ -956,7 +1016,13 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "New Piskel (35)3.png",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "bullet",
+                          "x": 126,
+                          "y": 12
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
@@ -1112,7 +1178,7 @@
         {
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
-          "name": "carrot",
+          "name": "carrotAmmo",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -1120,16 +1186,17 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "carrot (1)",
               "useMultipleDirections": false,
               "directions": [
                 {
                   "looping": false,
+                  "metadata": "{\"pskl\":{}}",
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "carrot.png",
+                      "image": "carrot (1)2",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -1145,20 +1212,20 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 40,
+                            "x": 14,
+                            "y": 34
+                          },
+                          {
+                            "x": 88,
+                            "y": 34
+                          },
+                          {
+                            "x": 88,
                             "y": 60
                           },
                           {
-                            "x": 470,
+                            "x": 14,
                             "y": 60
-                          },
-                          {
-                            "x": 470,
-                            "y": 440
-                          },
-                          {
-                            "x": 40,
-                            "y": 440
                           }
                         ]
                       ]
@@ -1607,7 +1674,7 @@
             "objectName": "crow"
           },
           {
-            "objectName": "carrot"
+            "objectName": "carrotAmmo"
           },
           {
             "objectName": "carrotPickup"
@@ -2100,6 +2167,109 @@
               ]
             }
           ]
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Player Shoot",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [],
+          "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonFromTextReleased"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "FireBullet::FireBullet::FireTowardPosition"
+              },
+              "parameters": [
+                "player",
+                "FireBullet",
+                "player.CenterX()-50",
+                "player.CenterY()",
+                "carrotAmmo",
+                "MouseX()",
+                "MouseY()",
+                "300",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "carrotAmmo",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "carrotAmmo",
+                "crow",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "crow",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "carrotAmmo",
+                ""
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -2222,6 +2392,10 @@
         {
           "name": "Effect",
           "type": "EffectCapability::EffectBehavior"
+        },
+        {
+          "name": "FireBullet",
+          "type": "FireBullet::FireBullet"
         },
         {
           "name": "Flippable",
