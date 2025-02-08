@@ -590,6 +590,36 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "mouse-click-sound-233950.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "mouse-click-sound-233950.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "mouse-click-sound-233949.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "mouse-click-sound-233949.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "mouse-click-sound-233948.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "mouse-click-sound-233948.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -621,7 +651,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.2987985363606927,
+        "zoomFactor": 0.27050126039625705,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -1974,6 +2004,7 @@
             },
             {
               "name": "Pathfinding",
+              "rotateObject": true,
               "type": "PathfindingBehavior::PathfindingBehavior",
               "acceleration": 400,
               "allowDiagonals": true,
@@ -1985,7 +2016,6 @@
               "gridOffsetX": 0,
               "gridOffsetY": 0,
               "maxSpeed": 200,
-              "rotateObject": true,
               "smoothingMaxCellGap": 1
             }
           ],
@@ -4436,6 +4466,14 @@
             },
             {
               "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "0.5"
+              ]
+            },
+            {
+              "type": {
                 "value": "Scene"
               },
               "parameters": [
@@ -5292,10 +5330,18 @@
               },
               "parameters": [
                 "",
-                "mouse-click-sound-233951.mp3",
+                "mouse-click-sound-233948.mp3",
                 "",
                 "50",
                 "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "0.5"
               ]
             },
             {
