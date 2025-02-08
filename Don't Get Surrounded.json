@@ -373,7 +373,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.6197916666666689,
+        "zoomFactor": 1.5686691119147846,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -578,29 +578,13 @@
           "customSize": false,
           "height": 0,
           "keepRatio": true,
-          "layer": "",
-          "name": "crow",
-          "persistentUuid": "02d7a746-fe81-4c8c-978b-87487de334d7",
-          "width": 0,
-          "x": 1311,
-          "y": 679,
-          "zOrder": 15,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
           "layer": "UI",
           "name": "heartempty",
           "persistentUuid": "5cf33f09-d080-4e9e-b669-8878ee56d742",
           "width": 0,
-          "x": 0,
-          "y": 10,
-          "zOrder": 16,
+          "x": -1,
+          "y": 12,
+          "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -643,22 +627,6 @@
           "height": 0,
           "keepRatio": true,
           "layer": "UI",
-          "name": "heart1",
-          "persistentUuid": "b6a665c5-e088-462f-95aa-cfe3549c90e9",
-          "width": 0,
-          "x": 0,
-          "y": 10,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "UI",
           "name": "heart2",
           "persistentUuid": "ef56b031-693c-4a8b-9350-44134fb7c059",
           "width": 0,
@@ -681,6 +649,22 @@
           "x": 250,
           "y": 10,
           "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "heart1",
+          "persistentUuid": "a68869fd-9cc3-4f2d-9c10-7baa9c7a46f2",
+          "width": 0,
+          "x": -1,
+          "y": 11,
+          "zOrder": 22,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1347,66 +1331,6 @@
         {
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
-          "name": "heart1",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "New Piskel (38).png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 12,
-                            "y": 16
-                          },
-                          {
-                            "x": 116,
-                            "y": 16
-                          },
-                          {
-                            "x": 116,
-                            "y": 116
-                          },
-                          {
-                            "x": 12,
-                            "y": 116
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "",
           "name": "heartempty",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -1583,6 +1507,126 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "heart1",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "New Piskel (38).png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 12,
+                            "y": 16
+                          },
+                          {
+                            "x": 116,
+                            "y": 16
+                          },
+                          {
+                            "x": 116,
+                            "y": 116
+                          },
+                          {
+                            "x": 12,
+                            "y": 116
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "heart4",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "New Piskel (38).png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 12,
+                            "y": 16
+                          },
+                          {
+                            "x": 116,
+                            "y": 16
+                          },
+                          {
+                            "x": 116,
+                            "y": 116
+                          },
+                          {
+                            "x": 12,
+                            "y": 116
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -1619,10 +1663,13 @@
             "objectName": "sky_tile"
           },
           {
-            "objectName": "heart1"
+            "objectName": "heart2"
           },
           {
-            "objectName": "heart2"
+            "objectName": "heart4"
+          },
+          {
+            "objectName": "heart1"
           },
           {
             "objectName": "heart3"
@@ -1812,42 +1859,6 @@
               },
               "parameters": [
                 "player",
-                "crow",
-                "",
-                "",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Cache"
-              },
-              "parameters": [
-                "heart3"
-              ]
-            },
-            {
-              "type": {
-                "value": "Delete"
-              },
-              "parameters": [
-                "crow",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "CollisionNP"
-              },
-              "parameters": [
-                "player",
                 "collision",
                 "",
                 "",
@@ -1879,7 +1890,7 @@
                 "",
                 "\"EnemySpawn\"",
                 ">=",
-                "10"
+                "3"
               ]
             }
           ],
@@ -1941,11 +1952,95 @@
                 },
                 {
                   "type": {
+                    "value": "Visible"
+                  },
+                  "parameters": [
+                    "heart3"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Visible"
+                  },
+                  "parameters": [
+                    "heart2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Visible"
+                  },
+                  "parameters": [
+                    "heart1"
+                  ]
+                }
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "heart3"
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "crow",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::And"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "player",
+                    "crow",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
                     "inverted": true,
                     "value": "Visible"
                   },
                   "parameters": [
                     "heart3"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Visible"
+                  },
+                  "parameters": [
+                    "heart2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Visible"
+                  },
+                  "parameters": [
+                    "heart1"
                   ]
                 }
               ]
@@ -1958,6 +2053,15 @@
               },
               "parameters": [
                 "heart2"
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "crow",
+                ""
               ]
             }
           ]
@@ -2000,6 +2104,14 @@
                   "parameters": [
                     "heart2"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "Visible"
+                  },
+                  "parameters": [
+                    "heart1"
+                  ]
                 }
               ]
             }
@@ -2012,13 +2124,17 @@
               "parameters": [
                 "heart1"
               ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "crow",
+                ""
+              ]
             }
           ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
         },
         {
           "colorB": 228,
