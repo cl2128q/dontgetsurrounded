@@ -302,6 +302,22 @@
         "name": "NewSprite7",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "assets/flapUp.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "flapUp",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/flapUp2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "flapUp2",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -333,7 +349,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.2531414001298629,
+        "zoomFactor": 0.2074649961630142,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -354,8 +370,8 @@
           "name": "tree",
           "persistentUuid": "c3870fec-c624-40ee-8cac-d2a85cd2c1a4",
           "width": 0,
-          "x": -417,
-          "y": 660,
+          "x": -402,
+          "y": 1223,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -370,8 +386,8 @@
           "name": "tree",
           "persistentUuid": "161d6dfe-18b1-4364-b485-1cd5952e8dc3",
           "width": 0,
-          "x": 1453,
-          "y": 659,
+          "x": 1499,
+          "y": 1215,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -386,8 +402,8 @@
           "name": "tree",
           "persistentUuid": "b4766810-d036-42ba-9647-0d9de0b78c51",
           "width": 0,
-          "x": 820,
-          "y": 691,
+          "x": 850,
+          "y": 1201,
           "zOrder": 7,
           "numberProperties": [],
           "stringProperties": [],
@@ -406,23 +422,6 @@
           "x": 360,
           "y": 234,
           "zOrder": 8,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 268,
-          "keepRatio": true,
-          "layer": "",
-          "name": "crow",
-          "persistentUuid": "08c90db6-1f4a-45b2-9976-ebf4880207ff",
-          "width": 210,
-          "x": 996,
-          "y": 277,
-          "zOrder": 9,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -473,6 +472,90 @@
           "x": 621,
           "y": 360,
           "zOrder": 13,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "Collision",
+          "name": "collision",
+          "persistentUuid": "b2c1285b-b7a2-4ed5-8dc6-63e4cebcd913",
+          "width": 3228,
+          "x": -642,
+          "y": 1156,
+          "zOrder": 14,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "Collision",
+          "name": "collision",
+          "persistentUuid": "b59e14e0-c0bc-48dd-8923-759a93a88548",
+          "width": 3228,
+          "x": -620,
+          "y": -244,
+          "zOrder": 14,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 90,
+          "customSize": true,
+          "depth": 1,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "Collision",
+          "name": "collision",
+          "persistentUuid": "3238a849-9ef1-4069-a07d-2ff26de0950b",
+          "width": 1653,
+          "x": -1375,
+          "y": 420,
+          "zOrder": 14,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 90,
+          "customSize": true,
+          "depth": 1,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "Collision",
+          "name": "collision",
+          "persistentUuid": "239ab164-bebd-429a-a0cf-e6701ec9cc41",
+          "width": 1653,
+          "x": 1688,
+          "y": 457,
+          "zOrder": 14,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "crow",
+          "persistentUuid": "02d7a746-fe81-4c8c-978b-87487de334d7",
+          "width": 0,
+          "x": 1311,
+          "y": 679,
+          "zOrder": 15,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -748,6 +831,8 @@
           "effects": [],
           "behaviors": [
             {
+              "name": "Pathfinding",
+              "type": "PathfindingBehavior::PathfindingBehavior",
               "acceleration": 400,
               "allowDiagonals": true,
               "angleOffset": 0,
@@ -758,10 +843,8 @@
               "gridOffsetX": 0,
               "gridOffsetY": 0,
               "maxSpeed": 200,
-              "name": "Pathfinding",
               "rotateObject": true,
-              "smoothingMaxCellGap": 1,
-              "type": "PathfindingBehavior::PathfindingBehavior"
+              "smoothingMaxCellGap": 1
             }
           ],
           "animations": [
@@ -771,11 +854,12 @@
               "directions": [
                 {
                   "looping": true,
+                  "metadata": "{\"pskl\":{}}",
                   "timeBetweenFrames": 0.5,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "crowFlapUp.png",
+                      "image": "flapUp",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -791,27 +875,27 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 70,
-                            "y": 145
+                            "x": 36,
+                            "y": 74
                           },
                           {
-                            "x": 430,
-                            "y": 145
+                            "x": 220,
+                            "y": 74
                           },
                           {
-                            "x": 430,
-                            "y": 355
+                            "x": 220,
+                            "y": 182
                           },
                           {
-                            "x": 70,
-                            "y": 355
+                            "x": 36,
+                            "y": 182
                           }
                         ]
                       ]
                     },
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "crowFlapDown2.png",
+                      "image": "flapUp2",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -827,20 +911,20 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 70,
-                            "y": 145
+                            "x": 36,
+                            "y": 74
                           },
                           {
-                            "x": 430,
-                            "y": 145
+                            "x": 220,
+                            "y": 74
                           },
                           {
-                            "x": 430,
-                            "y": 355
+                            "x": 220,
+                            "y": 182
                           },
                           {
-                            "x": 70,
-                            "y": 355
+                            "x": 36,
+                            "y": 182
                           }
                         ]
                       ]
@@ -1152,6 +1236,30 @@
           ]
         },
         {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"EnemySpawn\""
+              ]
+            }
+          ]
+        },
+        {
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
@@ -1286,6 +1394,74 @@
             }
           ],
           "actions": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "player",
+                "collision",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "player",
+                "collision",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CompareTimer"
+              },
+              "parameters": [
+                "",
+                "\"EnemySpawn\"",
+                ">=",
+                "10"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "crow",
+                "RandomInRange(293,304)",
+                "RandomInRange(1507,764)",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"EnemySpawn\""
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -1379,7 +1555,7 @@
           "isLocked": false,
           "name": "Collision",
           "renderingType": "",
-          "visibility": true,
+          "visibility": false,
           "cameras": [],
           "effects": [
             {
