@@ -652,6 +652,16 @@
         "name": "right2",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "eagledeath.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "eagledeath.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -689,7 +699,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.36458333333333715,
+        "zoomFactor": 0.3088741216342692,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -3652,6 +3662,18 @@
                 "no",
                 "no",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "eagledeath.mp3",
+                "",
+                "100",
+                "1"
               ]
             },
             {
